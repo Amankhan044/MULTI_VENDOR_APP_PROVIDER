@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:multi_vendor_app_provider/firebase_options.dart';
 import 'package:multi_vendor_app_provider/models/main_view_provider.dart';
+import 'package:multi_vendor_app_provider/views/buyers/auth/register_screen.dart';
 import 'package:multi_vendor_app_provider/views/buyers/main_view.dart';
 import 'package:provider/provider.dart';
 
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
             fontFamily: "Brand-Bold"),
-        home: MainView(),
+        home: RegisterScreen(),
       ),
     );
   }
