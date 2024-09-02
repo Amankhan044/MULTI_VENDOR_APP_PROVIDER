@@ -1,15 +1,11 @@
 import 'dart:typed_data';
 
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:multi_vendor_app_provider/controllers/auth_controller.dart';
 
 class AuthProvider extends ChangeNotifier {
   final AuthController _authController = AuthController();
-  final FirebaseAuth _auth=FirebaseAuth.instance;
-  final FirebaseStorage _storage=FirebaseStorage.instance;
   bool _isLoading = false;
 
   bool get isLoading => _isLoading;
@@ -57,6 +53,7 @@ class AuthProvider extends ChangeNotifier {
 
   selectCameraImage() async {
     Uint8List img = await _authController.pickProfileImage(ImageSource.camera);
+     // ignore: unnecessary_null_comparison
      if (img != null) {
       _image = img;
       notifyListeners();

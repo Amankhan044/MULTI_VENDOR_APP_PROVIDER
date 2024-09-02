@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:multi_vendor_app_provider/controllers/auth_controller.dart';
 import 'package:multi_vendor_app_provider/models/auth_provider.dart';
 import 'package:multi_vendor_app_provider/views/buyers/auth/login_screen.dart';
 import 'package:provider/provider.dart';
 
-class RegisterScreen extends StatelessWidget {
+// ignore: must_be_immutable
+class BuyersRegisterScreen extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
